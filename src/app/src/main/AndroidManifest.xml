@@ -23,11 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Models.Registro"></activity>
+        <activity android:name=".Models.Registro" />
+        <activity android:name=".EstadoHabitacion"></activity>
     </application>
 
 </manifest>
