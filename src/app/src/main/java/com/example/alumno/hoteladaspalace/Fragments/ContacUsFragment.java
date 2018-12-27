@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import com.example.alumno.hoteladaspalace.R;
 
 
-public class GalleryFragment extends Fragment {
+public class ContacUsFragment extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        return inflater.inflate(R.layout.fragment_contac_us, container, false);
     }
 }
