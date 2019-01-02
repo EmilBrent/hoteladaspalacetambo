@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_online_reservation"
             android:title="Reserva" />
         <item
             android:id="@+id/nav_gallery"
@@ -14,13 +14,13 @@
             android:title="Galeria" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_quienes_somos"
             android:title="Acerca de Nosotros" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_receptor_de_telefono"
             android:title="Contáctanos" />
-    </group>    
+    </group>
 
     <item android:title="Communicate">
         <menu>

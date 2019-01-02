@@ -10,7 +10,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent o = new Intent(this, MainActivity.class);
+        Intent o = new Intent(this, MenuActivity.class);
         startActivity(o);
         finish();
     }

@@ -18,7 +18,10 @@ import android.view.MenuItem;
 import com.example.alumno.hoteladaspalace.Fragments.AboutUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContacUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContentFragment;
+import com.example.alumno.hoteladaspalace.Fragments.CurrentRoomFragment;
 import com.example.alumno.hoteladaspalace.Fragments.GalleryFragment;
+import com.example.alumno.hoteladaspalace.Fragments.Reservation_BeedromFragment;
+import com.example.alumno.hoteladaspalace.Fragments.RoomListFragment;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -93,7 +96,7 @@ public class MenuActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
-
+            fragmentManager.beginTransaction().replace(R.id.menu,new RoomListFragment()).commit();
         } else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.menu,new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
@@ -109,5 +112,13 @@ public class MenuActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void fragmentChange(String _fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if ( _fragment.equals("habitacion") ) {
+            fragmentManager.beginTransaction().replace(R.id.menu,new CurrentRoomFragment()).commit();
+        }
+
     }
 }
