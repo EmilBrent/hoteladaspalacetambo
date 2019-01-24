@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -14,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_hotel_letra_h_signo_dentro_de_un_cuadrado_redondeado_negro" />
-                            <entry key="sourceFile" value="E:\Imagenes\hotel-letra-h-signo-dentro-de-un-cuadrado-redondeado-negro.svg" />
+                            <entry key="outputName" value="ic_users" />
+                            <entry key="sourceFile" value="E:\Imagenes\users.svg" />
                           </map>
                         </option>
                       </PersistentState>

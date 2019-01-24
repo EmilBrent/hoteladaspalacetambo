@@ -20,6 +20,7 @@ import com.example.alumno.hoteladaspalace.Fragments.ContacUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContentFragment;
 import com.example.alumno.hoteladaspalace.Fragments.CurrentRoomFragment;
 import com.example.alumno.hoteladaspalace.Fragments.GalleryFragment;
+import com.example.alumno.hoteladaspalace.Fragments.Registro;
 import com.example.alumno.hoteladaspalace.Fragments.Reservation_BeedromFragment;
 import com.example.alumno.hoteladaspalace.Fragments.RoomListFragment;
 
@@ -97,6 +98,8 @@ public class MenuActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             fragmentManager.beginTransaction().replace(R.id.menu,new RoomListFragment()).commit();
+        } else if (id == R.id.nav_reserva) {
+            fragmentManager.beginTransaction().replace(R.id.menu,new Registro()).commit();
         } else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.menu,new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
