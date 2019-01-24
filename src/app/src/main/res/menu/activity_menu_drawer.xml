@@ -26,16 +26,16 @@
             android:title="Contáctanos" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Hola Emil">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/show_my_account"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Mi Cuenta" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Enviar" />
         </menu>
     </item>
 

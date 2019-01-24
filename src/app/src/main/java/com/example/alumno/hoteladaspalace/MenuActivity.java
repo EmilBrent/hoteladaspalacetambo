@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.alumno.hoteladaspalace.Fragments.AboutUsFragment;
+import com.example.alumno.hoteladaspalace.Fragments.AccountFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContacUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContentFragment;
 import com.example.alumno.hoteladaspalace.Fragments.CurrentRoomFragment;
@@ -106,10 +107,12 @@ public class MenuActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.menu,new AboutUsFragment()).commit();
         } else if (id == R.id.nav_manage) {
             fragmentManager.beginTransaction().replace(R.id.menu,new ContacUsFragment()).commit();
-        } else if (id == R.id.nav_share) {
+        //} else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
+        } else if ( id == R.id.show_my_account ) {
+        fragmentChange("my-account");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -121,7 +124,12 @@ public class MenuActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         if ( _fragment.equals("habitacion") ) {
             fragmentManager.beginTransaction().replace(R.id.menu,new CurrentRoomFragment()).commit();
+        } else if ( _fragment.equals("my-account") ) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.menu, new AccountFragment()).addToBackStack(null).commit();
         }
+
+
 
     }
 }
