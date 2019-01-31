@@ -98,6 +98,7 @@ public class MenuActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
+
             fragmentManager.beginTransaction().replace(R.id.menu,new RoomListFragment()).commit();
         } else if (id == R.id.nav_reserva) {
             fragmentManager.beginTransaction().replace(R.id.menu,new Registro()).commit();
@@ -107,13 +108,14 @@ public class MenuActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.menu,new AboutUsFragment()).commit();
         } else if (id == R.id.nav_manage) {
             fragmentManager.beginTransaction().replace(R.id.menu,new ContacUsFragment()).commit();
-        //} else if (id == R.id.nav_share) {
-
-        //} else if (id == R.id.nav_send) {
-
         }else if (id ==R.id.show_my_account){
             fragmentChange("my-account");
         }
+            //} else if (id == R.id.nav_share) {
+
+        //} else if (id == R.id.nav_send) {
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
