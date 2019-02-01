@@ -29,13 +29,14 @@
     <item android:title="Hola Emil">
         <menu>
             <item
-                android:id="@+id/show_my_account"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Mi cuenta" />
-            <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Salir" />
+                android:icon="@drawable/ic_gps"
+                android:title="GPS" />
+            <item
+                android:id="@+id/show_my_account"
+                android:icon="@drawable/ic_author"
+                android:title="Autor" />
+
         </menu>
     </item>
 
