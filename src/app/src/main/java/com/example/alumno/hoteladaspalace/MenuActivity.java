@@ -16,10 +16,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.alumno.hoteladaspalace.Fragments.AboutUsFragment;
+import com.example.alumno.hoteladaspalace.Fragments.AccountFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContacUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContentFragment;
 import com.example.alumno.hoteladaspalace.Fragments.CurrentRoomFragment;
 import com.example.alumno.hoteladaspalace.Fragments.GalleryFragment;
+import com.example.alumno.hoteladaspalace.Fragments.MapFragment2;
+import com.example.alumno.hoteladaspalace.Fragments.Registro;
 import com.example.alumno.hoteladaspalace.Fragments.Reservation_BeedromFragment;
 import com.example.alumno.hoteladaspalace.Fragments.RoomListFragment;
 
@@ -96,18 +99,28 @@ public class MenuActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
+
             fragmentManager.beginTransaction().replace(R.id.menu,new RoomListFragment()).commit();
+        } else if (id == R.id.nav_reserva) {
+            fragmentManager.beginTransaction().replace(R.id.menu,new Registro()).commit();
         } else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.menu,new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
             fragmentManager.beginTransaction().replace(R.id.menu,new AboutUsFragment()).commit();
         } else if (id == R.id.nav_manage) {
             fragmentManager.beginTransaction().replace(R.id.menu,new ContacUsFragment()).commit();
-        } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            fragmentChange("maps");
+        }else if (id ==R.id.show_my_account){
+            fragmentChange("my-account");
         }
+
+            //} else if (id == R.id.nav_share) {
+
+        //} else if (id == R.id.nav_send) {
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -119,6 +132,15 @@ public class MenuActivity extends AppCompatActivity
         if ( _fragment.equals("habitacion") ) {
             fragmentManager.beginTransaction().replace(R.id.menu,new CurrentRoomFragment()).commit();
         }
+        else if (_fragment.equals("my-account")){
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.menu,new AccountFragment()).addToBackStack(null).commit();
+        }
+        else if ( _fragment.equals("maps") ) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.menu, new MapFragment2()).addToBackStack(null).commit();
+        }
+
 
     }
 }
