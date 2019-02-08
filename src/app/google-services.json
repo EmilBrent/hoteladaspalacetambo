@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "566504998375",
+    "firebase_url": "https://hoteladaspalace.firebaseio.com",
+    "project_id": "hoteladaspalace",
+    "storage_bucket": "hoteladaspalace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566504998375:android:4b3c85c3542d0561",
+        "android_client_info": {
+          "package_name": "com.example.alumno.hoteladaspalace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566504998375-0ii58rp7ktucvprmusiskup83efo5boh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1NLPkl9PVTIPHttKgMhtoQiNrAV9_mBA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

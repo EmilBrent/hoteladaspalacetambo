@@ -15,6 +15,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
+import com.example.alumno.hoteladaspalace.Models.Habitacion;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import com.example.alumno.hoteladaspalace.Fragments.AboutUsFragment;
 import com.example.alumno.hoteladaspalace.Fragments.AccountFragment;
 import com.example.alumno.hoteladaspalace.Fragments.ContacUsFragment;
@@ -28,6 +37,10 @@ import com.example.alumno.hoteladaspalace.Fragments.RoomListFragment;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    FirebaseDatabase databaseFireBase;
+    DatabaseReference productsReference;
+    DatabaseReference bedroomReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +66,9 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        databaseFireBase = FirebaseDatabase.getInstance();
+        productsReference = databaseFireBase.getReference("bedroom");
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -102,11 +118,19 @@ public class MenuActivity extends AppCompatActivity
 
             fragmentManager.beginTransaction().replace(R.id.menu,new RoomListFragment()).commit();
         } else if (id == R.id.nav_reserva) {
+            ArrayList<Habitacion> bedroom = new ArrayList<>();
+
+            Habitacion myNewProduct = new Habitacion(1, "Habitacion Doble");
+            bedroom.add(myNewProduct);
+
+            productsReference.setValue(bedroom);
+            /* Enviamos datos a firebase */
             fragmentManager.beginTransaction().replace(R.id.menu,new Registro()).commit();
         } else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.menu,new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-            fragmentManager.beginTransaction().replace(R.id.menu,new AboutUsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.menu, new AboutUsFragment()).commit();
+
         } else if (id == R.id.nav_manage) {
             fragmentManager.beginTransaction().replace(R.id.menu,new ContacUsFragment()).commit();
 

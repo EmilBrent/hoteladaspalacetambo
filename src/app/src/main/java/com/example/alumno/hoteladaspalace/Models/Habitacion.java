@@ -6,6 +6,10 @@ public class Habitacion {
     public String codigo;
     public String descripcion;
 
+    public Habitacion(){
+
+    }
+
     public Habitacion(int _id, String _codigo) {
         this.id = _id;
         this.codigo = _codigo;
